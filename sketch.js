@@ -13,6 +13,14 @@ var ball;
 var blower;
 var blowerMouth;
 var button;
+var backgroundImg;
+
+function preload(){
+
+  backgroundImg = loadImage("./assets/background.png");
+
+}
+
 
 function setup() {
   var canvas = createCanvas(500, 500);
@@ -40,7 +48,7 @@ button.size(50,50);
 }
 
 function draw() {
-  background(59);
+  background(backgroundImg);
   Engine.update(engine);
 
   blower.show();
